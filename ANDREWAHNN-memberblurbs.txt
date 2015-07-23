@@ -1,0 +1,16 @@
+------------------------------------------
+Mirror this format.  Example provided
+------------------------------------------
+Position (Web, Secretary, President, Treasurer, Member, etc)
+Name (First Last)
+Favorite academic topic/class (comma delimited list)
+Dream Job (comma delimited list)
+Projected year of graduation (Year)
+
+
+Web
+Andrew Ahn
+Optimization, Natural Language Processing, Graph Theory
+Scientist
+2016
+
