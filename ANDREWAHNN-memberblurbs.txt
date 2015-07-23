@@ -7,7 +7,17 @@ Favorite academic topic/class (comma delimited list)
 Dream Job (comma delimited list)
 Projected year of graduation (Year)
 
+Example:
+------------------------------------------
+Member
+Joe Schmoe
+Physics, Java
+Software Engineer
+2016
 
+
+START HERE:
+------------------------------------------
 Web
 Andrew Ahn
 Optimization, Natural Language Processing, Graph Theory
