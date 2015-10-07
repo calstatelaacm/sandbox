@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background-color: #559ECB;
+  color: #3B3738;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+#logo{
+	height: 100;
+	width: 100;
+	margin: 0px auto;
+	display:block
+}
+
+#container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  background: #F8F8F8
+}
+
+section {
+  margin-top: 20px;
+}
+
+pre {
+  display: block;
+  margin: 0;
+}
+
+/*pre code {
+    font-family: Menlo, Monaco, monospace;
+    background: black;
+    padding: 15px;
+    white-space: pre;
+    overflow: auto;
+    display: block;
+}*/
+
+pre {
+    overflow: auto;
+    color: white;
+    background: #000000;
+    padding: 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    position: relative;
+}
+
+h4 {
+  margin-bottom: .5em;
+}
+
+h4+p {
+  margin-top:0;
+}
+
+li {
+  margin-bottom: .5em;
+}
+
+.hint {
+  display:none;
+}
+
+.hint-prompt {
+  padding: 20px;
+  background-color: #DDD;
+  text-align: center;
+}
+
+a.tooltip {
+  position: relative;
+}
+
+a.tooltip::before {
+    content: attr(data-tip) ;
+    width: 500px;
+    position:absolute;
+    z-index: 999;
+    top: 25px;
+    background:#000;
+    color:#e0e0e0;
+    padding:5px 10px;
+    line-height: 24px;
+
+    opacity: 0;
+    transition:opacity 0.4s ease-out;
+    }
+
+a.tooltip:hover::before {
+    opacity: 1;
+    }
+
+p.warning {
+  color: red;
+}
+
+.indent {
+  padding-left: 2.2em;
+}
+
+.profile_pic{
+  height: 300px;
+  width: 300px;
+  margin: 0px auto;
+  display: block;
+  /*margin: 0px auto;*/
+  /*display:block*/
+}
+
+#name{
+  text-align: center;
+  margin-top: -3px;
+}
+
+#footer{
+  text-align: center;
+}
+
+/* to remove line break before lists (and after p tags) */
+/*p, ul, ol {
+    padding: 0;
+    margin: 0;
+}
+p, ul, ol {
+    display: inline;
+}*/
+
+textarea {
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.large-button {
+  margin-top: 10px;
+  font-size: 20px;
+  width: 100px;
+}
