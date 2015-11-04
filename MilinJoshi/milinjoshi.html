@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+	<!--JQuery Link-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   
+    <!--Bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!--MDL Loader Link-->    
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+	
+	<script type="text/javascript">
+			$(window).load(function () {
+			$(".loader").fadeOut("slow");
+		})
+	</script>
+	
+	
+	
+	
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.red-blue.min.css" /> 
+    <!--font link-->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700,400' rel='stylesheet' type='text/css'>
+    <!--Bootstrap Links-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+	
+	.loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		//background: url('/images/726.gif') 50% 50% no-repeat rgb(249,249,249);
+	}
+	
+	body {font-family: 'PT Sans', sans-serif; position:relative;}
+        .marginTop1 { margin-top:1%;}
+        .marginTop5 { margin-top:5%;}
+        .marginTop10 { margin-top:10%;}
+        .fontPTSans {font-family: 'PT Sans', sans-serif; }
+        /*Card Css*/
+        .demo-card-square.mdl-card {
+            width: 320px;
+            height: 320px;
+        }
+        .demo-card-square > .mdl-card__title {
+            color: #fff;
+        }
+        /*End Card Css*/
+        /*Large Card*/
+        .demo-card-wide.mdl-card {
+            // width: 512px;
+        }
+        .demo-card-wide > .mdl-card__title {
+          color: #fff;
+          height: 176px;
+          
+          //background: url('images/trslogo.jpg') center / cover no-repeat;
+          background: url('http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/trslogo.jpg') center / cover no-repeat;
+          background-size:contain;
+        }
+        .demo-card-wide > .mdl-card__menu {
+          color: #fff;
+        }
+        /*End Large Card*/
+        /*Event Card*/
+        .demo-card-event.mdl-card {
+          width: 256px;
+          height: 256px;
+          background: #3E4EB8;
+        }
+        .demo-card-event > .mdl-card__actions {
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+        .demo-card-event > .mdl-card__title {
+          align-items: flex-start;
+        }
+        .demo-card-event > .mdl-card__title > h4 {
+          margin-top: 0;
+        }
+        .demo-card-event > .mdl-card__actions {
+          display: flex;
+          box-sizing:border-box;
+          align-items: center;
+        }
+        .demo-card-event > .mdl-card__title,
+        .demo-card-event > .mdl-card__actions,
+        .demo-card-event > .mdl-card__actions > .mdl-button {
+          color: #fff;
+        }
+        /*End Event Card*/
+    </style>
+</head>
+<body class='container  wsite-theme-light'>
+					
+<!--Loader
+<div style="margin-top:30%;margin-left:30%;" class="loader">
+	<div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+	<div>Loading Milin's website...</div>
+</div>
+End Loader-->
+
+
+	<!--Navbar test-->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Milin Joshi</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav navbar-right">
+               <!--New list elements-->
+			   <li><a href="#Bio">Bio</a></li>
+               <li><a href="#Education">Education</a></li>
+               <li><a href="#Experience">Experience</a></li>
+               <li><a href="#Skills">Skills</a></li>
+			  <!--End New List Elements-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+	<!--End Navbar test-->
+    <!--Navbar
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+            </button>
+				<a class="navbar-brand" href="#">Milin Joshi</a>
+            </div>
+            <div  class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#Bio">Bio</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>-->
+    <!--End Navbar-->
+
+    <div class="row">
+        <!--Image div-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <!--
+               <img class="marginTop10 img-responsive img-circle text-center center-block" height="20%" width="20%" src="/images/milinjoshi.jpg" alt="Milin Joshi" />
+        --> 
+            <img style="margin-top:100px;" class="marginTop10 img-responsive img-circle text-center center-block" height="20%" width="20%" src="http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/milinjoshi.jpg" alt="Milin Joshi" />
+        </div>
+        <!--Bio-->
+        <div id="Bio" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop5">
+            <!--About-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+                <div class="col-lg-8 col-md-8 col-sm-11 col-xs-11 fontPTSans">
+                    <h3  class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded" style="font-size:large;background-color:#0275d8;color:white;padding:2%;">About Me</h3>
+                   
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="font-size:medium;">
+                        <hr />  
+                        I am a PC devotee. I am constantly inquisitive for new advances. This is the thing that drives me. I like to compose Code, construct Animations and create Games.
+                        Looking for Internship-position opportunity in the field of Computer Science, Masters Student at California State University, Los Angeles
+                        I seek to be a critical individual from a quality driven organization where I will ready to put my designing abilities and specialized information to down to earth utilization.
+                        I completed Bachelors in Computer Engineering from Gujarat Technological University, India.
+                    
+					</div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+            </div>
+            
+            <!--Location-->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+                <div  class="col-lg-8 col-md-8 col-sm-11 col-xs-11 panel fontPTSans">
+                   
+					<h3 style="font-size:large;background-color:#0275d8;color:white;padding:2%;" class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded" >Contact</h3>
+                   
+					 <br /> <hr />
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"  style="font-size:medium;">
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 "><b>Birthdate</b></div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">01/21/1992</div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><b>CellPhone</b></div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">+1-323-203-2119</div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><b>Address</b></div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">4235 Tyler Ave, Apt 23, El Monte, CA - 91731, USA</div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><b>Email</b> </div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">milincjoshi@gmail.com</div>
+                     </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                             <a class=" col-lg-12 col-md-12 col-sm-9 col-xs-9 text-center center-block" target="_blank" href="https://www.linkedin.com/in/milincjoshi">
+                            <!--
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive pull-right" src="images/linkedin.png" alt="Linkedin.com/in/milincjoshi" />
+                            -->
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive center-block text-center" src="http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/linkedin.png" alt="Linkedin.com/in/milincjoshi" />
+                            </a>
+							 <a class=" col-lg-12 col-md-12 col-sm-9 col-xs-9 text-center center-block" target="_blank" href="https://github.com/milincjoshi">
+                            <!--
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive pull-right" src="images/linkedin.png" alt="Linkedin.com/in/milincjoshi" />
+                            -->
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive center-block text-center" src="http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/github.png" alt="Linkedin.com/in/milincjoshi" />
+                           </a>
+							
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+            </div>
+           
+            <!--Trying Panel-->
+            <div id="Education" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!--<div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>-->
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 panel">
+                        <!--<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">--><!--Panel Heading-->
+                            <!--<h3 class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">Education</h3>-->
+							<h3 class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded " style="font-size:large;background-color:#0275d8;color:white; padding:2%;">Education</h3>
+                    
+                        <!--</div>-->
+                        <!--<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-body">--><!--Panel Body-->
+                            <table class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 table">
+                                <tr class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                    <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4 "><strong>Degree</strong></th>
+                                    <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4 "> <strong>Institute</strong></th>
+                                    <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><strong>Grade</strong></th>
+                                    <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><strong>Duration</strong></th>
+                                </tr>
+                                <tr  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">Masters in Computer Science</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> California State University, Los Angeles</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4"> Currently pursuing</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">2015-2017</td>
+                                </tr>
+                                <tr  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Masters in Computer Science</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">Lamar University</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">3.0/4.0</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">2015-2015</td>
+                                </tr>
+                                <tr class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Bachelors in Computer Engineering</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Gujarat Technological University</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">6.44/10.00</td>
+                                    <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4">2009-2013</td>
+                                </tr>
+                            </table>
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+            </div>
+            <!--End trying panel-->
+            <!--Experience-->
+            <div id="Experience" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+                <div class="col-lg-8 col-md-8 col-sm-11 col-xs-11">
+
+                    <div class=" col-lg-12 col-sm-12 col-xs-12 panel">
+                            <h3 style="font-size:large;background-color:#0275d8;color:white;padding:2%;" class="col-lg-12 col-sm-12 col-xs-12 panel-title img-rounded">Experience</h3>
+					<br>
+					<br>
+                        <div  class="col-lg-12 col-md-12 panel-body pull-left">
+                            
+							
+							<!--IBM Watson-->
+							 <div style="margin-top:20px;padding:2%; background-color:#BCC6CC;" class="demo-card-wide mdl-card  col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop10 img-rounded">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title" style="background-image:none; margin-top:-5%;">
+                                    <h2 style="color:darkblue; padding:1%;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded mdl-card__title-text">Metamorphosis<br />IBM Watson Services</h2>
+                                </div>
+                                <div style="background-color: #FD9308 ;color:white;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__supporting-text text-justify img-rounded">
+                                    • Language Translation <br />
+                                    • Text-to-Speech Conversion  <br />
+                                    • A web application made with IBM Watson Services.  <br />
+                                </div>
+
+                            </div>
+                            <!--End Card-->
+							<!--End IBM Watson-->
+							<!--Student Information System-->
+							 <div style="margin-top:40px;padding:2%; background-color:#e64759;" class="demo-card-wide mdl-card  col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop10 img-rounded">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title" style="background-image:none; margin-top:-5%;">
+                                    <h2 style="color:white; padding:1%;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded mdl-card__title-text">Student Information System</h2>
+                                </div>
+                                <div style="background-color: white;color:black;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__supporting-text text-justify img-rounded">
+                                    • ASP.Net, C#, MS SQL Server, Bootstrap<br />
+                                    • Developed a Web application for storing Student Data for schools/colleges and allowing professors and students access the data accordingly when required.  <br />
+                                </div>
+
+                            </div>
+                          	<!--End Student Information System-->
+                            <!--Row 1 RA and GOT-->
+                            <div style="margin-top:20px;" class="col-lg-12 col-md-12">
+                                <!--RA-->
+                                <div style="background-color:#333; margin-top:10px;"  class="demo-card-square mdl-card col-lg-6 col-md-6 img-rounded">
+                                    <div style="background-color:rgb(139, 195, 74); " class=" col-lg-12 mdl-card__title mdl-card--expand img-rounded">
+                                        <!--<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title-text text-left">
+                                            -->Research Assistant @ Lamar University
+                                        <!--</h2>-->
+                                    </div>
+                                    <div style="color:white;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__supporting-text">
+                                        <ul>
+                                            <li>Worked as Lead Developer on Unity 3.1/4.0/5 platform </li>
+                                            <li>Utilized C# and 3D modeling for building University's virtual environment in Unity.</li>
+                                            <li>Lead a team of 3 for creating Virtual Environment.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a target="_blank" href="http://artssciences.lamar.edu/computer-science/whats-new/lamar-university-virtual-map.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            View Website
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--End RA-->
+                                <!--GOT-->
+                                <div style="margin-top:15px;padding:5px;" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-rounded demo-card-event mdl-card pull-right">
+                                    <div class="mdl-card__title mdl-card--expand text-center">
+                                        <h4>
+                                            <span class="img-rounded" style="color: #3E4EB8;background-color:white;padding:5px;">Game of Thrones</span><hr />
+                                            <ul>
+                                                <li> A Windows Phone 8 app</li>
+                                                <li>Info App made for Game of Thrones</li>
+                                                <li> Multi-Lingual</li>
+                                                <li>Design Pattern: MVVM</li>
+                                            </ul>
+                                        </h4>
+
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a  target="_blank" href="https://www.microsoft.com/en-us/store/apps/game-of-thrones/9wzdncrdq2rp" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            Visit Windows Store
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--End GOT-->
+                            </div>
+                            <!--End Row 1 RA and GOT-->
+
+                            <!--Row 2 TRS-->
+                            <div style="margin-top:40px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center center-block">
+                                <div  class="demo-card-wide mdl-card col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop10 img-rounded ">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title">
+                                        <h2 style="color:white; background-color:black; padding:1%;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded  mdl-card__title-text">Transformer Repair Systems</h2>
+                                    </div>
+                                    <div style="background-color: rgb(255, 106, 0);;color:white;" class=" col-lg-12 col-sm-12 col-xs-12 mdl-card__supporting-text text-justify img-rounded">
+                                        • Worked on Windows Forms with C# for creating a Windows Desktop Application for Transformer Repairing Industries. <br />
+                                        • Worked as Lead Developer, Programmer for this project.  <br />
+                                        • Supported Customers on Technical Issues for the project.  <br />
+                                        • Led a team of 5 members for building the application. <br />
+										• Sold application to 100 companies in 2 days.<br/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Row 2 TRS-->
+
+                            <!--Row 3 RC and CGS-->
+                            <div style="margin-top:40px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center center-block">
+                                <!--RC-->
+                                <div style="background-color:#46B6AC;" class="demo-card-event pull-left col-lg-6 col-md-6 col-sm-12 col-xs-12 marginTop5 img-rounded">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title mdl-card--expand">
+                                        <h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <strong><span class="img-rounded" style="padding:5px; background-color:white;color:#46B6AC;">Rachana Constructions</span></strong><hr />
+                                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <li>A portfolio Website</li>
+                                                <li>For a Real Estate Company</li>
+                                                <li>Bootstrap/Asp.net with C#, MS SQL Server 2010</li>
+                                            </ul>
+                                        </h4>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__actions mdl-card--border">
+                                        <a target="_blank" href="http://rachanaconstruction.co/" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            Visit
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--End RC-->
+                                <!--RTERP-->
+                                <div style="margin-top:40px;background-color:#8E24AA;" class="demo-card-event mdl-card pull-right col-lg-6 col-md-6 col-sm-12 col-xs-12 marginTop5 img-rounded">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title mdl-card--expand">
+                                        <h4>
+                                            <strong><span  class="img-rounded"  style="padding:5px; background-color:white;color:#8E24AA;">Royal Textiles ERP</span></strong><hr />
+                                            <ul>
+                                                <li>ASP.NET 3.5 with C#</li>
+                                                <li>SQL Server 2008</li>
+                                                <li>Managing everyday finance, product data and labour data.</li>
+                                            </ul>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <!--End RTERP-->
+                            </div>
+                            <!--End Row 3 RC and CGS-->
+
+                            <!--CGS-->
+                            <!--End CGS-->
+
+                            <!--Event Card-->
+                            
+                            <!--End Event Card-->
+                            <!--Card-->
+                            
+                           
+                            <!--Card-->
+                            <div style="margin-top:40px;padding:2%; background-color:#b3d4fc;" class="demo-card-wide mdl-card  col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop10 img-rounded">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__title" style="background-image:none; margin-top:-5%;">
+                                    <h2 style="color:darkblue; padding:1%;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded mdl-card__title-text">Intern as a Software Developer<br />Career Guide System</h2>
+                                </div>
+                                <div style="background-color: #ff4081 ;color:white;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mdl-card__supporting-text text-justify img-rounded">
+                                    • HTML, ASP.NET 3.5 Framework with C# <br />
+                                    • SQL Server 2008  <br />
+                                    • A website for counseling students about choosing career opportunities.  <br />
+                                </div>
+
+                            </div>
+                            <!--End Card-->
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
+            </div>
+            <!--cards-->
+            <div id="Skills" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="col-lg-2 col-md-2  col-sm-12 col-xs-12 "></div>
+                <div class="col-lg-8 col-md-8  col-sm-12 col-xs-12 ">
+                    <div class=" col-lg-12 col-md-12  col-sm-12 col-xs-12 ">
+                        <div style="background-color:#0275d8;color:white;" class=" col-lg-12 col-md-12  col-sm-12 col-xs-12 img-rounded">
+                          	<h3 class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-rounded" style="font-size:large;">Wall of Skills</h3>
+                   
+						 <br>
+						<br>
+						
+						</div>
+                        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 panel-body">
+                                <div class="col-lg-2 col-md-2"><strong>HTML</strong></div>
+                                <div class="col-lg-2 col-md-2 "><strong>CSS</strong></div>
+                                <div class="col-lg-2 col-md-2 "><strong>Java</strong></div>
+                                <div class="col-lg-2 col-md-2 "><strong>C#</strong></div>
+                                <div class="col-lg-2 col-md-2 "><strong>SQL</strong></div>
+                                <div class="col-lg-2 col-md-2 "><strong>.NET</strong></div>
+                            <hr />
+                                <div class="col-lg-2 col-md-2 "><strong>Unity</strong></div>
+                                <div class="col-lg-2 col-md-2 ">C</div>
+                                <div class="col-lg-2 col-md-2 ">C++</div>
+                                <div class="col-lg-2 col-md-2 ">Autodesk Maya</div>
+                                <div class="col-lg-2 col-md-2 ">Oculus Rift</div>
+                                <div class="col-lg-2 col-md-2 ">JSP</div>
+                            <br /><hr />
+                                <div class="col-lg-2 col-md-2">ASP</div>
+                            <br /><hr />
+                                <div class="col-lg-12 col-md-12 ">Currently learning Android and python. </div>
+                            <br />
+                            <hr />
+                            <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">Any many more coming.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 "></div>
+
+				<!--Footer-->
+				<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+					<div class=" col-lg-2 col-md-2"></div>
+					<div class=" col-lg-8 col-md-8 ">
+						  <h3 class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="font-size:large;">Connect</h3>
+                  
+						
+						<!--FB-->
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                             <a class=" col-lg-12 col-md-12 col-sm-9 col-xs-9 text-center center-block" target="_blank" href="https://www.facebook.com/milincjoshi">
+                            <!--
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive pull-right" src="images/linkedin.png" alt="Linkedin.com/in/milincjoshi" />
+                            -->
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive center-block text-center" src="http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/fb.png" alt="facebook.com/milincjoshi" />
+                            </a>
+						</div>
+						<!--End FB-->
+						<!--Wordpress-->
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                             <a class=" col-lg-12 col-md-12 col-sm-9 col-xs-9 text-center center-block" target="_blank" href="https://milincjoshi.wordpress.com/">
+                            <!--
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive pull-right" src="images/linkedin.png" alt="Linkedin.com/in/milincjoshi" />
+                            -->
+                                <img class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 img-circle img-responsive center-block text-center" src="http://www.weebly.com/editor/uploads/2/6/9/1/26913164/custom_themes/491711962254056724/files/Wordpress-Icon.png" alt="milincjoshi.wordpress.com" />
+                            </a>
+						</div>
+						<!--End Wordpress-->
+						
+					</div>
+					<div class=" col-lg-2 col-md-2"></div>
+					
+				</div>
+				<!--End Footer-->
+				
+            </div>
+        </div>
+    </div> 
+ 
+<div style='display:none'>{title}</div>
+<div style='display:none'>{menu}</div>
+<div style='display:none'>{content}</div>
+<div style='padding: 20px; width:100%; text-align:center;'>{footer}</div>
+</body>
+</html>
